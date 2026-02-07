@@ -6,10 +6,14 @@
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <PackageId>Twizzle.VmaSharp</PackageId>
-    <Version>1.0.0-pre.15</Version>
+    <Version>1.0.0.1-pre.15</Version>
     <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/JoeTwizzle/VMABindings</PackageProjectUrl>
+    <Description>C# bindings for the GPUOpen Vulkan Memory Allocator library</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>VMA;Vulkan;OpenTK;C#;GPU</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
@@ -49,6 +53,10 @@
 
   <ItemGroup>
     <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
