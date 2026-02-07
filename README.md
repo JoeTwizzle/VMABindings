@@ -5,6 +5,8 @@ Vulkan bindings use OpenTK 5 (preview)
 
 Documentation can be found at <https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator>
 
+The native library build is performed using github actions in this repo: https://github.com/JoeTwizzle/vma-shared
+
 # Nuget
 Twizzle.VMASharp is available as a nuget package 
 
