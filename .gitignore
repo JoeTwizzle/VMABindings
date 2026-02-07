@@ -84,6 +84,8 @@ StyleCopReport.xml
 *.rsp
 # but not Directory.Build.rsp, as it configures directory-level build defaults
 !Directory.Build.rsp
+#also allow the bindings rsp
+!gen_bindings.rsp
 *.sbr
 *.tlb
 *.tli
