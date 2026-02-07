@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using static VMASharp.Native.VmaAllocationCreateFlagBits;
@@ -137,10 +138,10 @@ namespace VMASharp.Native
     public unsafe partial struct VmaVulkanFunctions
     {
         [NativeTypeName("PFN_vkGetInstanceProcAddr _Nullable")]
-        public delegate* unmanaged<VkInstance, byte*, delegate* unmanaged<void>> vkGetInstanceProcAddr;
+        public delegate* unmanaged<VkInstance, byte*, IntPtr> vkGetInstanceProcAddr;
 
         [NativeTypeName("PFN_vkGetDeviceProcAddr _Nullable")]
-        public delegate* unmanaged<VkDevice, byte*, delegate* unmanaged<void>> vkGetDeviceProcAddr;
+        public delegate* unmanaged<VkDevice, byte*, IntPtr> vkGetDeviceProcAddr;
 
         [NativeTypeName("PFN_vkGetPhysicalDeviceProperties _Nullable")]
         public delegate* unmanaged<VkPhysicalDevice, VkPhysicalDeviceProperties*, void> vkGetPhysicalDeviceProperties;
@@ -155,7 +156,7 @@ namespace VMASharp.Native
         public delegate* unmanaged<VkDevice, VkDeviceMemory, VkAllocationCallbacks*, void> vkFreeMemory;
 
         [NativeTypeName("PFN_vkMapMemory _Nullable")]
-        public delegate* unmanaged<VkDevice, VkDeviceMemory, ulong, ulong, uint, void**, VkResult> vkMapMemory;
+        public delegate* unmanaged<VkDevice, VkDeviceMemory, ulong, ulong, VkMemoryMapFlagBits, void**, VkResult> vkMapMemory;
 
         [NativeTypeName("PFN_vkUnmapMemory _Nullable")]
         public delegate* unmanaged<VkDevice, VkDeviceMemory, void> vkUnmapMemory;

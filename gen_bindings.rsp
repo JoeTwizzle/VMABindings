@@ -90,8 +90,8 @@ VMA_VIRTUAL_ALLOCATION_CREATE_STRATEGY_MIN_OFFSET_BIT=VmaVirtualAllocationCreate
 VMA_VIRTUAL_ALLOCATION_CREATE_STRATEGY_MASK=VmaVirtualAllocationCreateStrategyMask
 VMA_VIRTUAL_ALLOCATION_CREATE_FLAG_BITS_MAX_ENUM=VmaVirtualAllocationCreateFlagBitsMaxEnum
 sbyte*=byte*
-delegate* unmanaged[Stdcall]<void>=IntPtr
-delegate* unmanaged[Stdcall]<VkDevice, VkDeviceMemory, ulong, ulong, uint, void**, VkResult>=delegate* unmanaged[Stdcall]<VkDevice, VkDeviceMemory, ulong, ulong, VkMemoryMapFlagBits, void**, VkResult>
+delegate* unmanaged<void>=IntPtr
+delegate* unmanaged<VkDevice, VkDeviceMemory, ulong, ulong, uint, void**, VkResult>=delegate* unmanaged<VkDevice, VkDeviceMemory, ulong, ulong, VkMemoryMapFlagBits, void**, VkResult>
 --config
 strip-enum-member-type-name
 --with-transparent-struct
