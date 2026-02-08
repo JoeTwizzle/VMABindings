@@ -4,7 +4,7 @@ E:\Programs/Service/vulkan-sdk/1.4.355.0/Include/
 --file
 E:\Code/CSharp/VMABindings/VulkanMemoryAllocator/include/vk_mem_alloc.h
 --namespace
-VMASharp.Native
+VMASharp
 --output
 ./VMABindings/Generated.cs
 --libraryPath
@@ -12,7 +12,10 @@ vma
 --prefixStrip
 vma
 --methodClassName
-VmaNative
+Vma
+--define-macro
+VMA_CALL_POST=__cdecl
+VMA_CALL_PRE=__declspec(dllexport)
 --remap
 VkDeviceMemory_T=VkDeviceMemory
 VkInstance_T=VkInstance
@@ -89,13 +92,19 @@ VMA_VIRTUAL_ALLOCATION_CREATE_STRATEGY_MIN_TIME_BIT=VmaVirtualAllocationCreateSt
 VMA_VIRTUAL_ALLOCATION_CREATE_STRATEGY_MIN_OFFSET_BIT=VmaVirtualAllocationCreateStrategyMinOffsetBit
 VMA_VIRTUAL_ALLOCATION_CREATE_STRATEGY_MASK=VmaVirtualAllocationCreateStrategyMask
 VMA_VIRTUAL_ALLOCATION_CREATE_FLAG_BITS_MAX_ENUM=VmaVirtualAllocationCreateFlagBitsMaxEnum
+VmaAllocationCreateFlags=VmaAllocationCreateFlagBits
+VmaDefragmentationFlags=VmaDefragmentationFlagBits
+VmaVirtualAllocationCreateFlags=VmaVirtualAllocationCreateFlagBits
+VmaVirtualBlockCreateFlags=VmaVirtualBlockCreateFlagBits
+VmaPoolCreateFlags=VmaPoolCreateFlagBits
+VkMemoryPropertyFlags=VkMemoryPropertyFlagBits
+VmaAllocatorCreateFlags=VmaAllocatorCreateFlagBits
 sbyte*=byte*
 delegate* unmanaged<void>=IntPtr
 delegate* unmanaged<VkDevice, VkDeviceMemory, ulong, ulong, uint, void**, VkResult>=delegate* unmanaged<VkDevice, VkDeviceMemory, ulong, ulong, VkMemoryMapFlagBits, void**, VkResult>
 --config
-strip-enum-member-type-name
+strip-enum-member-type-name	
 --with-transparent-struct
-void* vkGetMemoryWin32HandleKHR=delegate* unmanaged<VkDevice, VkMemoryGetWin32HandleInfoKHR*, IntPtr*, VkResult> vkGetMemoryWin32HandleKHR
 VkDeviceMemory=VkDeviceMemory
 VkInstance=VkInstance
 VkDevice=VkDevice
@@ -110,4 +119,34 @@ VmaDefragmentationContext=VmaDefragmentationContext
 VmaAllocation=VmaAllocation
 VmaPool=VmaPool
 --with-callconv
-*=Winapi
+vkGetInstanceProcAddr=Winapi
+vkGetDeviceProcAddr=Winapi
+vkGetPhysicalDeviceProperties=Winapi
+vkGetPhysicalDeviceMemoryProperties=Winapi
+vkAllocateMemory=Winapi
+vkFreeMemory=Winapi
+vkMapMemory=Winapi
+vkUnmapMemory=Winapi
+vkFlushMappedMemoryRanges=Winapi
+vkInvalidateMappedMemoryRanges=Winapi
+vkBindBufferMemory=Winapi
+vkBindImageMemory=Winapi
+vkGetBufferMemoryRequirements=Winapi
+vkGetImageMemoryRequirements=Winapi
+vkCreateBuffer=Winapi
+vkDestroyBuffer=Winapi
+vkCreateImage=Winapi
+vkDestroyImage=Winapi
+vkCmdCopyBuffer=Winapi
+vkGetBufferMemoryRequirements2KHR=Winapi
+vkGetImageMemoryRequirements2KHR=Winapi
+vkBindBufferMemory2KHR=Winapi
+vkBindImageMemory2KHR=Winapi
+vkGetPhysicalDeviceMemoryProperties2KHR=Winapi
+vkGetDeviceBufferMemoryRequirements=Winapi
+vkGetDeviceImageMemoryRequirements=Winapi
+vma*=Cdecl
+pfnAllocate=Cdecl
+pfnFree=Cdecl
+pfnBreakCallback=Cdecl
+--with-type vkGetMemoryWin32HandleKHR=delegate* unmanaged<VkDevice, VkMemoryGetWin32HandleInfoKHR*, IntPtr*, VkResult>
