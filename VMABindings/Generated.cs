@@ -5,6 +5,7 @@ using static VMASharp.VmaAllocationCreateFlagBits;
 
 namespace VMASharp
 {
+    [Flags]
     public enum VmaAllocatorCreateFlagBits
     {
         VmaAllocatorCreateExternallySynchronizedBit = 0x00000001,
@@ -35,6 +36,7 @@ namespace VMASharp
         MaxEnum = 0x7FFFFFFF,
     }
 
+    [Flags]
     public enum VmaAllocationCreateFlagBits
     {
         VmaAllocationCreateDedicatedMemoryBit = 0x00000001,
@@ -57,6 +59,7 @@ namespace VMASharp
         MaxEnum = 0x7FFFFFFF,
     }
 
+    [Flags]
     public enum VmaPoolCreateFlagBits
     {
         VmaPoolCreateIgnoreBufferImageGranularityBit = 0x00000002,
@@ -65,6 +68,7 @@ namespace VMASharp
         MaxEnum = 0x7FFFFFFF,
     }
 
+    [Flags]
     public enum VmaDefragmentationFlagBits
     {
         VmaDefragmentationFlagAlgorithmFastBit = 0x1,
@@ -82,6 +86,7 @@ namespace VMASharp
         Destroy = 2,
     }
 
+    [Flags]
     public enum VmaVirtualBlockCreateFlagBits
     {
         VmaVirtualBlockCreateLinearAlgorithmBit = 0x00000001,
@@ -89,6 +94,7 @@ namespace VMASharp
         MaxEnum = 0x7FFFFFFF,
     }
 
+    [Flags]
     public enum VmaVirtualAllocationCreateFlagBits
     {
         VmaVirtualAllocationCreateUpperAddressBit = VmaAllocationCreateUpperAddressBit,
